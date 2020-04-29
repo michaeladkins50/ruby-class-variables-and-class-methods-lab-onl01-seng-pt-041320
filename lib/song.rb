@@ -17,7 +17,12 @@ class Song
      @@count
   end
   def self.artists
-    @@artists.sort
+    contrib_artists = {}
+    @@artists.each do |artist|
+      contrib_artists << artist if contrib_artists.include? = false
+    end
+    contrib_artists
+  end
   end
 
 end
