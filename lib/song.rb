@@ -17,14 +17,8 @@ class Song
      @@count
   end
   def self.artists
-    contrib_artists = {}
-    @@artists.each do |artist|
-       if contrib_artists.include(artist) = false
-         contrib_artists << artist
-       end
-    end
-    contrib_artists
-  end
+    @@artists.uniq!
+    
   end
 
 end
