@@ -19,7 +19,9 @@ class Song
   def self.artists
     contrib_artists = {}
     @@artists.each do |artist|
-      contrib_artists << artist if contrib_artists.include? = false
+       if contrib_artists.include?(artist) = false
+         contrib_artists << artist
+       end
     end
     contrib_artists
   end
